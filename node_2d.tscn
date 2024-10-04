@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://c3wjdcatkwnia"]
+
+[ext_resource type="Shader" path="res://ColorChangeShader.gdshader" id="1_0rjte"]
+[ext_resource type="Texture2D" uid="uid://btcfomayqk0jj" path="res://Gunpowder.png" id="2_3inod"]
+[ext_resource type="Texture2D" uid="uid://dufgynhfqh0vf" path="res://icon.svg" id="3_72lh1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mx56s"]
+shader = ExtResource("1_0rjte")
+shader_parameter/lowColor = Color(0, 0, 0, 1)
+shader_parameter/midColor = Color(1, 1, 1, 1)
+shader_parameter/highColor = Color(1, 1, 1, 1)
+shader_parameter/grayscaleImage = ExtResource("2_3inod")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wsgkp"]
+shader = ExtResource("1_0rjte")
+shader_parameter/lowColor = Color(0, 0, 0, 1)
+shader_parameter/midColor = Color(0.878172, 0.338942, 0, 1)
+shader_parameter/highColor = Color(1, 0, 0, 1)
+shader_parameter/grayscaleImage = ExtResource("2_3inod")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q3yt1"]
+shader = ExtResource("1_0rjte")
+shader_parameter/lowColor = Color(0, 0, 0, 1)
+shader_parameter/midColor = Color(0.352941, 0.482353, 1, 1)
+shader_parameter/highColor = Color(0, 0.6, 0.682353, 1)
+shader_parameter/grayscaleImage = ExtResource("2_3inod")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mf37a"]
+shader = ExtResource("1_0rjte")
+shader_parameter/lowColor = Color(0, 0, 0, 1)
+shader_parameter/midColor = Color(0.956863, 0, 0.521569, 1)
+shader_parameter/highColor = Color(0.956863, 0, 0.529412, 1)
+shader_parameter/grayscaleImage = ExtResource("2_3inod")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5lm6j"]
+shader = ExtResource("1_0rjte")
+shader_parameter/lowColor = Color(0, 0, 0, 1)
+shader_parameter/midColor = Color(0.156863, 0.643137, 0, 1)
+shader_parameter/highColor = Color(0.317647, 0.623529, 0, 1)
+shader_parameter/grayscaleImage = ExtResource("2_3inod")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_mx56s")
+position = Vector2(116, 144)
+texture = ExtResource("3_72lh1")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_wsgkp")
+position = Vector2(220, 143)
+texture = ExtResource("3_72lh1")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_q3yt1")
+position = Vector2(322, 143)
+texture = ExtResource("3_72lh1")
+
+[node name="Icon4" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_mf37a")
+position = Vector2(426, 143)
+texture = ExtResource("3_72lh1")
+
+[node name="Icon5" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_5lm6j")
+position = Vector2(533, 143)
+texture = ExtResource("3_72lh1")
